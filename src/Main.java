@@ -11,12 +11,14 @@ public class Main {
 
     public static void main(String[] args){
 //        testeExcepion();
-        System.out.println("valor");
+        System.out.println("antes do runtime");
         try{
             testeRunTimeExceprion();
         } catch (RuntimeException e) {
             log.warning("erro de runtime " +e);
         }
+        lancarRunTimeExceprion();
+
         System.out.println("valor");
     }
 
@@ -33,5 +35,10 @@ public class Main {
         throw new RuntimeException("erro");
     }
 
+    //laçara aritmetic exception
+    public static void lancarRunTimeExceprion(){
+        float div = 10/0;
+        System.out.println(div);
+    }
 
 }
