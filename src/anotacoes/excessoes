@@ -1,0 +1,36 @@
+Exceções JAVA
+são os desvios(erros que sao contornaveis ou corrigiveis) que nosso código podem apresentar, abaixo segue como se deve tratar elas
+
+ORDEM DAS HERANCAS:
+THROWABLE (n outros)-> EXCEPTION -> RUNTIMEEXCEPTION
+
+como tratar exceções
+try{
+	bloco de código;
+}catch(Exception e){
+	throw e;
+	podemos lançar log
+}
+
+Excepition:
+contem as exceções que são checadas em tempo de compilação.
+ou seja, são reconhecidas na hora do programa ser rodado
+
+
+Exceções nao verificadas:
+
+RUNTIMEEXCEPTION
+nao sao verificadas durante a compilacao, sao excesoes durante o funcionameto como somar 3 valores inexistentes. consultas nulas, etc
+se deve usar o try catch
+
+THROWABLE
+é de onde as Exception herdam, existem outros ERROS que herdam de throwable. geralmente são erros que não tem muito o que se fazer por exemplo
+OutOfPutException
+
+arvore
+
+                          Throwable()
+
+            Exception()                              OutOfPutException() - errors
+ RunTimeException(tempo de execucao)
+ FileNotFoundException(tempo de compilacao)
